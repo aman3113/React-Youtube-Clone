@@ -3,7 +3,7 @@ import { GrNotification } from "react-icons/gr";
 import { BiUserCircle } from "react-icons/bi";
 import Youtube from "../Assets/YoutubeLogo.png";
 import { useDispatch } from "react-redux";
-import { toggleSideBar } from "../Store/toggleSlice";
+import { toggleSideBar } from "../Store/AppSlice";
 
 const Header = () => {
   const dispatch = useDispatch();

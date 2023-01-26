@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import toggleReducer from "./toggleSlice";
+import appReducer from "./AppSlice";
 
 const store = configureStore({
   reducer: {
-    toggle: toggleReducer,
+    app: appReducer,
   },
 });
 

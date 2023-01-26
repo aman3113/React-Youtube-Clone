@@ -5,7 +5,7 @@ import { AiOutlineYoutube } from "react-icons/ai";
 import { SiYoutubemusic } from "react-icons/si";
 import { useDispatch } from "react-redux";
 import Youtube from "../Assets/YoutubeLogo.png";
-import { toggleSideBar } from "../Store/toggleSlice";
+import { toggleSideBar } from "../Store/AppSlice";
 
 const FixedSideBar = () => {
   const dispatch = useDispatch();
