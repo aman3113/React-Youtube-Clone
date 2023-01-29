@@ -8,7 +8,7 @@ const CommentSection = ({ id }) => {
 
   useEffect(() => {
     getCommentsData();
-  }, []);
+  }, [id]);
 
   async function getCommentsData() {
     const data = await fetchApi(url);
@@ -16,7 +16,7 @@ const CommentSection = ({ id }) => {
   }
 
   return (
-    <div>
+    <div className="w-full overflow-hidden">
       {commentList?.map((comment) => {
         return <Comment commentDetail={comment?.snippet} key={comment.id} />;
       })}

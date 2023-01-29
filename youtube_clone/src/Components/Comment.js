@@ -12,13 +12,13 @@ const Comment = ({ commentDetail }) => {
     textDisplay,
   } = snippet;
   return (
-    <div className="flex my-2 bg-gray-50  rounded-2xl">
+    <div className="flex my-2 w-full bg-gray-50  rounded-2xl">
       <img
         className="w-10 h-10 rounded-full m-1"
         src={authorProfileImageUrl}
         alt=""
       />
-      <div className=" p-2">
+      <div className=" p-2 w-auto">
         <div className="text-sm">
           <span className="font-bold">{authorDisplayName} .</span>{" "}
           {moment(publishedAt).fromNow()}

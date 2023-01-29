@@ -4,6 +4,7 @@ import { BiUserCircle } from "react-icons/bi";
 import Youtube from "../Assets/YoutubeLogo.png";
 import { useDispatch } from "react-redux";
 import { toggleSideBar } from "../Store/AppSlice";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,9 @@ const Header = () => {
           size={30}
           onClick={() => dispatch(toggleSideBar())}
         />
-        <img className="w-24 " src={Youtube} alt="" />
+        <Link to={"/"}>
+          <img className="w-24 " src={Youtube} alt="" />
+        </Link>
       </div>
 
       <input

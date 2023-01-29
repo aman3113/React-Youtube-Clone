@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .Wrapper {
-  width: 500vw;
+  width: 350vw;
 }
 
 .TagList::-webkit-scrollbar {

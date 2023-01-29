@@ -1,13 +1,26 @@
 import moment from "moment";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { channelListUrl } from "../Utils/config";
+import { channelListUrl, fetchApi } from "../Utils/config";
 
 const VideoCard = ({ video }) => {
   const { snippet, statistics, id } = video;
-  const [channelImg, setChannelImg] = useState("");
+  const [channelData, setChannelData] = useState("");
   const { channelId, channelTitle, publishedAt, thumbnails, title } = snippet;
   const { viewCount } = statistics;
+
+  const url = channelListUrl + channelId;
+
+  useEffect(() => {
+    getChannelImage();
+  }, []);
+
+  async function getChannelImage() {
+    const channelData = await fetchApi(url);
+    setChannelData(
+      () => channelData?.items[0]?.snippet?.thumbnails?.default?.url
+    );
+  }
 
   return (
     <Link to={"/watch?v=" + id}>
@@ -15,7 +28,7 @@ const VideoCard = ({ video }) => {
         <img className=" rounded-lg" src={thumbnails?.medium?.url} alt="" />
         <div className="flex w-full py-2">
           <div className="w-1/5">
-            <img src={channelImg} alt="" className="w-10 h-10 rounded-full" />
+            <img src={channelData} alt="" className="w-10 h-10 rounded-full" />
           </div>
 
           <div className=" w-4/5 ">
