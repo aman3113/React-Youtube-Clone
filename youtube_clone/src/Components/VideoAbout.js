@@ -43,7 +43,8 @@ const VideoAbout = ({ videoDetail }) => {
         <div className="flex gap-6 items-center ">
           <div className=" bg-slate-100 rounded-xl px-3 py-2 flex items-center gap-2">
             <BiLike size={20} />
-            {statistics?.likeCount / 1000}k | <BiDislike size={20} />
+            {Math.trunc(statistics?.likeCount / 1000)}k |{" "}
+            <BiDislike size={20} />
           </div>
           <div className=" bg-slate-100 rounded-xl px-3 py-2 flex items-center gap-2">
             <IoIosShareAlt size={20} /> Share
