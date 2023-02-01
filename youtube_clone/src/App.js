@@ -1,11 +1,11 @@
 import Header from "./Components/Header";
 import FixedSideBar from "./Components/DynamicSideBar";
 import HomePage from "./Components/HomePage";
+import LiveChatPage from "./Components/LiveChatPage";
+import VideoPage from "./Components/VideoPage";
+import ErrorElement from "./ErrorElement";
 import { useSelector } from "react-redux";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import VideoPage from "./Components/VideoPage";
-import { ErrorElement } from "./ErrorElement";
-import LiveChatPage from "./Components/LiveChatPage";
 
 function App() {
   const isSideBarVisible = useSelector((store) => store.app.isSideBarVisible);

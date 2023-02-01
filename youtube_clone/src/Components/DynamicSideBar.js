@@ -12,7 +12,7 @@ const FixedSideBar = () => {
 
   return (
     <div
-      className="fixed top-0 h-screen w-screen bg-blue-100/70 z-20"
+      className="fixed top-0 h-screen w-screen bg-blue-50/70 z-20"
       onClick={() => dispatch(toggleSideBar())}
     >
       <div
