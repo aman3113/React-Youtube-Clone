@@ -4,6 +4,8 @@ import HomePage from "./Components/HomePage";
 import { useSelector } from "react-redux";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import VideoPage from "./Components/VideoPage";
+import { ErrorElement } from "./ErrorElement";
+import LiveChatPage from "./Components/LiveChatPage";
 
 function App() {
   const isSideBarVisible = useSelector((store) => store.app.isSideBarVisible);
@@ -20,6 +22,7 @@ function App() {
     {
       path: "/",
       element: <AppLayout />,
+      errorElement: <ErrorElement />,
       children: [
         {
           index: true,
@@ -28,6 +31,10 @@ function App() {
         {
           path: "/watch",
           element: <VideoPage />,
+        },
+        {
+          path: "/live",
+          element: <LiveChatPage />,
         },
       ],
     },

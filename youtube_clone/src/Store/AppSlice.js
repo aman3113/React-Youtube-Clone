@@ -11,7 +11,7 @@ const appSlice = createSlice({
       state.isSideBarVisible = !state.isSideBarVisible;
     },
     cacheVideoList: (state, action) => {
-      state.videoList = action.payload;
+      state.videoList = action.payload ? action.payload : {};
     },
   },
 });

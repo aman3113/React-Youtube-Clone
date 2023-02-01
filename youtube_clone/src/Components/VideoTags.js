@@ -7,6 +7,9 @@ const VideoTags = ({ tagsDetail }) => {
   return (
     <div className="overflow-x-scroll w-full TagList">
       <div className="w-[150vw] flex">
+        <div className=" bg-gray-200 border-none rounded-2xl  m-4 p-3 min-w-[70px] cursor-pointer">
+          <p className=" align-middle text-center">All</p>
+        </div>
         {tagsArr?.map((tag) => {
           return <TagButton tags={tag} key={tag} />;
         })}
